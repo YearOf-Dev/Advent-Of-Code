@@ -1,0 +1,6 @@
+packages:
+  - events/**/*
+  - utils/ts
+  - cli
+
+nodeLinker: hoisted
