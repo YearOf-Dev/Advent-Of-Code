@@ -16,35 +16,35 @@ from utils.python.performance import measurePerformance
 # | Part 1
 # ----------------------------------------------------------------------------------------------------
 def part1(input: list[str]) -> int:
-  final_floor = 0
-  directions = input[0]
+  total_area = 0
 
-  for direction in directions:
-    if direction == "(":
-      final_floor += 1
-    elif direction == ")":
-      final_floor -= 1
+  for present in input:
+    length, width, height = [int(x) for x in present.split("x")]
 
-  return final_floor
+    area = (2 * length * width) + (2 * width * height) + (2 * height * length)
+
+    smallestSide = min((length * width), (width * height), (height * length))
+    area += smallestSide
+
+    total_area += area
+
+  return total_area
 
 # ----------------------------------------------------------------------------------------------------
 # | Part 2
 # ----------------------------------------------------------------------------------------------------
 def part2(input: list[str]) -> int:
-  current_floor = 0
-  directions = input[0]
+  total_ribbon = 0
 
-  for i, direction in enumerate[str](directions):
-    if direction == "(":
-      current_floor += 1
-    elif direction == ")":
-      current_floor -= 1
+  for present in input:
+    length, width, height = [int(x) for x in present.split("x")]
 
-    if current_floor == -1:
-      return i + 1
+    perimeter = 2 * min(length + width, width + height, height + length)
+    volume = length * width * height
 
-  # If we never enter the basement, return -1
-  return -1
+    total_ribbon += perimeter + volume
+
+  return total_ribbon
 
 # ----------------------------------------------------------------------------------------------------
 # | Main Function
@@ -73,7 +73,7 @@ def main():
   # Return the results
   return AOCDayResults(
     Year=2015,
-    Day=1,
+    Day=2,
     Part1=p1Result,
     Part2=p2Result,
     Duration=duration,
