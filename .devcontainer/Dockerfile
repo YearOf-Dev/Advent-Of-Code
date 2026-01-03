@@ -19,6 +19,7 @@ RUN wget https://go.dev/dl/go1.25.5.linux-amd64.tar.gz \
     && rm go1.25.5.linux-amd64.tar.gz
 ENV GOROOT="/usr/local/go"
 ENV PATH="/usr/local/go/bin:${PATH}"
+RUN go install -v golang.org/x/tools/gopls@latest
 
 
 # Install Rust

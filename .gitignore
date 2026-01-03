@@ -1,6 +1,7 @@
 # Advent Of Code Specific Files
 input.txt
 input_*.txt
+aoc.config.json
 
 ### macOS ###
 # General
