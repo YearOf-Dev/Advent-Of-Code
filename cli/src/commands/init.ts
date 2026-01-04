@@ -271,7 +271,7 @@ def main():
   # Return the results
   return AOCDayResults(
     Year=${year},
-    Day=${day},
+    Day=${dayNumber},
     Part1=p1Result,
     Part2=p2Result,
     Duration=duration,
