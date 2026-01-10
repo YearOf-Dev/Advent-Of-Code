@@ -20,6 +20,6 @@ All of this is measured either by dedicated performance metrics built into the l
 | Language | Wins | Losses |
 | ----- | ----- | ----- |
 | Typescript | 7 | 2 |
-| Go | 10 | 4 |
+| Go | 13 | 4 |
 | Python | 5 | 5 |
-| Rust | 5 | 16 |
+| Rust | 5 | 19 |
