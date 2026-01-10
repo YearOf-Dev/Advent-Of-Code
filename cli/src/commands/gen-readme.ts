@@ -54,6 +54,9 @@ export function addCommand_genReadme(program: Command) {
         publishYear = '20' + publishYear;
       }
 
+      // Get the last two of the publish year
+      let publishYearLastTwo = publishYear.slice(-2);
+
       // Ensure the publish day is two digits long
       if (publishDay.length < 2) {
         publishDay = '0' + publishDay;
@@ -80,13 +83,13 @@ export function addCommand_genReadme(program: Command) {
       }
 
       // Generate the README.md file
-      fs.writeFileSync(path.join(eventLocation, 'README.md'), `![Advent of Code ${year}, Day ${dayNumber}](../../../.gitlab/assets/headers/${year}-${day}.png)
+      fs.writeFileSync(path.join(eventLocation, 'README.md'), `![Advent of Code ${year}, Day ${day}](../../../.gitlab/assets/headers/${year}-${day}.png)
 
-[![AOC ${year} ${dayNumber}](https://img.shields.io/badge/YearOf.Dev-AOC--${year}--${dayNumber}-hotpink?style=for-the-badge)](https://yodev.link/${year}${dayNumber}-aoc) [![Advent of Code](https://img.shields.io/badge/AoC-%E2%AD%90%E2%AD%90-0f0f23?style=for-the-badge)](https://adventofcode.com/${year}/day/${dayNumber})
+[![AOC ${year} ${dayNumber}](https://img.shields.io/badge/YearOf.Dev-AOC--${year}--${day}-hotpink?style=for-the-badge)](https://yodev.link/${publishYearLastTwo}${publishMonth}${publishDay}-aoc) [![Advent of Code](https://img.shields.io/badge/AoC-%E2%AD%90%E2%AD%90-0f0f23?style=for-the-badge)](https://adventofcode.com/${year}/day/${dayNumber})
 
 [![Typescript](https://img.shields.io/badge/Typescript-blue?style=for-the-badge)](solution.ts) [![Go](https://img.shields.io/badge/Go-lightblue?style=for-the-badge)](solution.go) [![Python](https://img.shields.io/badge/Python-yellow?style=for-the-badge)](solution.py) [![Rust](https://img.shields.io/badge/Rust-orange?style=for-the-badge)](solution.rs) 
 
-The write up for this Advent of Code challenge is available on [YearOf.Dev](https://yearof.dev) at [htts://yearof.dev/${publishYear}/${publishMonth}/${publishDay}/aoc-${year}-${dayNumber}](htts://yearof.dev/${publishYear}/${publishMonth}/${publishDay}/aoc-${year}-${dayNumber}).
+The write up for this Advent of Code challenge is available on [YearOf.Dev](https://yearof.dev) at [htts://yearof.dev/${publishYear}/${publishMonth}/${publishDay}/aoc-${year}-${day}](htts://yearof.dev/${publishYear}/${publishMonth}/${publishDay}/aoc-${year}-${day}).
 
 ## Timings
 
