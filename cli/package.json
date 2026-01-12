@@ -1,6 +1,6 @@
 {
   "name": "aoc",
-  "version": "0.1.6",
+  "version": "0.1.65",
   "private": true,
   "main": "dist/index.js",
   "bin": {

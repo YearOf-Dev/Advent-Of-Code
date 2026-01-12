@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
 import { Command } from 'commander';
 import { addCommand_init } from './commands/init';
@@ -10,7 +10,7 @@ const program = new Command();
 
 program
   .name("aoc")
-  .version('0.1.6')
+  .version('0.1.65')
 
 // Add all the commands
 addCommand_init(program);
