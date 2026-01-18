@@ -1,0 +1,28 @@
+{
+  "Year": 2015,
+  "Day": 17,
+  "Part1": {
+    "Result": 1304,
+    "ExecutionTime": 135667,
+    "Timestamp": {
+      "Start": "2026-01-18T01:28:30.965Z",
+      "End": "2026-01-18T01:28:30.965Z"
+    }
+  },
+  "Part2": {
+    "Result": {
+      "minContainers": 4,
+      "permutationCount": 18
+    },
+    "ExecutionTime": 637084,
+    "Timestamp": {
+      "Start": "2026-01-18T01:28:30.965Z",
+      "End": "2026-01-18T01:28:30.966Z"
+    }
+  },
+  "Duration": 924500,
+  "Timestamp": {
+    "Start": "2026-01-18T01:28:30.964Z",
+    "End": "2026-01-18T01:28:30.966Z"
+  }
+}
