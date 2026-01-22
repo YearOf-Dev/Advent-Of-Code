@@ -5400,6 +5400,606 @@
         ]
       }
     },
+    "19": {
+      "Timestamp": {
+        "Start": "2026-01-22T01:59:09.848Z",
+        "End": "2026-01-22T01:59:12.458Z"
+      },
+      "Winners": {
+        "Overall": "Python",
+        "Part1": "Python",
+        "Part2": "Python"
+      },
+      "Losers": {
+        "Overall": "Go",
+        "Part1": "Go",
+        "Part2": "Go"
+      },
+      "Typescript": {
+        "Language": "TypeScript",
+        "TotalRuns": 5,
+        "TimeStats": {
+          "Run": {
+            "Fastest": 5638792,
+            "Slowest": 6086875,
+            "Average": 5813350
+          },
+          "Part1": {
+            "Fastest": 3275750,
+            "Slowest": 3607083,
+            "Average": 3402433.4
+          },
+          "Part2": {
+            "Fastest": 2182583,
+            "Slowest": 2324958,
+            "Average": 2242141.6
+          }
+        },
+        "Results": {
+          "Part1": 576,
+          "Part2": 207
+        },
+        "Timestamp": {
+          "Start": "2026-01-22T01:59:09.848Z",
+          "End": "2026-01-22T01:59:10.551Z"
+        },
+        "Runs": [
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3607083,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.035Z",
+                "End": "2026-01-22T01:59:10.039Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2324958,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.039Z",
+                "End": "2026-01-22T01:59:10.041Z"
+              }
+            },
+            "Duration": 6086875,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10.034Z",
+              "End": "2026-01-22T01:59:10.041Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3306000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.159Z",
+                "End": "2026-01-22T01:59:10.163Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2233292,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.163Z",
+                "End": "2026-01-22T01:59:10.165Z"
+              }
+            },
+            "Duration": 5722667,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10.159Z",
+              "End": "2026-01-22T01:59:10.165Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3275750,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.287Z",
+                "End": "2026-01-22T01:59:10.291Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2280542,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.291Z",
+                "End": "2026-01-22T01:59:10.293Z"
+              }
+            },
+            "Duration": 5734750,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10.287Z",
+              "End": "2026-01-22T01:59:10.293Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3536125,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.409Z",
+                "End": "2026-01-22T01:59:10.412Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2189333,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.412Z",
+                "End": "2026-01-22T01:59:10.415Z"
+              }
+            },
+            "Duration": 5883666,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10.408Z",
+              "End": "2026-01-22T01:59:10.415Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3287209,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.536Z",
+                "End": "2026-01-22T01:59:10.540Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2182583,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10.540Z",
+                "End": "2026-01-22T01:59:10.542Z"
+              }
+            },
+            "Duration": 5638792,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10.536Z",
+              "End": "2026-01-22T01:59:10.542Z"
+            }
+          }
+        ]
+      },
+      "Go": {
+        "Language": "Go",
+        "TotalRuns": 5,
+        "TimeStats": {
+          "Run": {
+            "Fastest": 22148833,
+            "Slowest": 23647209,
+            "Average": 22597783.2
+          },
+          "Part1": {
+            "Fastest": 15328334,
+            "Slowest": 16715083,
+            "Average": 16031858.4
+          },
+          "Part2": {
+            "Fastest": 3659042,
+            "Slowest": 3864334,
+            "Average": 3746591.8
+          }
+        },
+        "Results": {
+          "Part1": 576,
+          "Part2": 207
+        },
+        "Timestamp": {
+          "Start": "2026-01-22T01:59:10.552Z",
+          "End": "2026-01-22T01:59:12.000Z"
+        },
+        "Runs": [
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 15328334,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10Z",
+                "End": "2026-01-22T01:59:10Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 3754917,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:10Z",
+                "End": "2026-01-22T01:59:10Z"
+              }
+            },
+            "Duration": 22148833,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:10Z",
+              "End": "2026-01-22T01:59:10Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 16715083,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 3864334,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Duration": 23647209,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:11Z",
+              "End": "2026-01-22T01:59:11Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 16011125,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 3659042,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Duration": 22540708,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:11Z",
+              "End": "2026-01-22T01:59:11Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 16136792,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 3792083,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Duration": 22429875,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:11Z",
+              "End": "2026-01-22T01:59:11Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 15967958,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 3662583,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:11Z",
+                "End": "2026-01-22T01:59:11Z"
+              }
+            },
+            "Duration": 22222291,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:11Z",
+              "End": "2026-01-22T01:59:11Z"
+            }
+          }
+        ]
+      },
+      "Python": {
+        "Language": "Python",
+        "TotalRuns": 5,
+        "TimeStats": {
+          "Run": {
+            "Fastest": 3239000,
+            "Slowest": 3811000,
+            "Average": 3466600
+          },
+          "Part1": {
+            "Fastest": 2146000,
+            "Slowest": 2535000,
+            "Average": 2287200
+          },
+          "Part2": {
+            "Fastest": 957000,
+            "Slowest": 1117000,
+            "Average": 1048600
+          }
+        },
+        "Results": {
+          "Part1": 576,
+          "Part2": 207
+        },
+        "Timestamp": {
+          "Start": "2026-01-22T01:59:12.000Z",
+          "End": "2026-01-22T01:59:12.093Z"
+        },
+        "Runs": [
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 2535000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.013859",
+                "End": "2026-01-22T01:59:12.016394"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 1117000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.016408",
+                "End": "2026-01-22T01:59:12.017525"
+              }
+            },
+            "Duration": 3811000,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.013709",
+              "End": "2026-01-22T01:59:12.017530"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 2378000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.033629",
+                "End": "2026-01-22T01:59:12.036008"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 1103000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.036026",
+                "End": "2026-01-22T01:59:12.037129"
+              }
+            },
+            "Duration": 3592000,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.033535",
+              "End": "2026-01-22T01:59:12.037136"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 2190000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.052336",
+                "End": "2026-01-22T01:59:12.054525"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 1091000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.054539",
+                "End": "2026-01-22T01:59:12.055630"
+              }
+            },
+            "Duration": 3411000,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.052215",
+              "End": "2026-01-22T01:59:12.055632"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 2146000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.069973",
+                "End": "2026-01-22T01:59:12.072119"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 975000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.072129",
+                "End": "2026-01-22T01:59:12.073104"
+              }
+            },
+            "Duration": 3239000,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.069856",
+              "End": "2026-01-22T01:59:12.073107"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 2187000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.088141",
+                "End": "2026-01-22T01:59:12.090328"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 957000,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.090337",
+                "End": "2026-01-22T01:59:12.091295"
+              }
+            },
+            "Duration": 3280000,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.088008",
+              "End": "2026-01-22T01:59:12.091297"
+            }
+          }
+        ]
+      },
+      "Rust": {
+        "Language": "Rust",
+        "TotalRuns": 5,
+        "TimeStats": {
+          "Run": {
+            "Fastest": 5454708,
+            "Slowest": 6067542,
+            "Average": 5741749.8
+          },
+          "Part1": {
+            "Fastest": 3073667,
+            "Slowest": 3529125,
+            "Average": 3288983.4
+          },
+          "Part2": {
+            "Fastest": 2295500,
+            "Slowest": 2406709,
+            "Average": 2353708.4
+          }
+        },
+        "Results": {
+          "Part1": 576,
+          "Part2": 207
+        },
+        "Timestamp": {
+          "Start": "2026-01-22T01:59:12.093Z",
+          "End": "2026-01-22T01:59:12.458Z"
+        },
+        "Runs": [
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3295958,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.247053593+00:00",
+                "End": "2026-01-22T01:59:12.250349593+00:00"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2330458,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.250351426+00:00",
+                "End": "2026-01-22T01:59:12.252681968+00:00"
+              }
+            },
+            "Duration": 5704750,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.246978259+00:00",
+              "End": "2026-01-22T01:59:12.252683134+00:00"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3529125,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.300543426+00:00",
+                "End": "2026-01-22T01:59:12.304072634+00:00"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2400083,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.304074968+00:00",
+                "End": "2026-01-22T01:59:12.306475093+00:00"
+              }
+            },
+            "Duration": 6067542,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.300408843+00:00",
+              "End": "2026-01-22T01:59:12.306476468+00:00"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3073667,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.352818051+00:00",
+                "End": "2026-01-22T01:59:12.355891759+00:00"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2295500,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.355893509+00:00",
+                "End": "2026-01-22T01:59:12.358189051+00:00"
+              }
+            },
+            "Duration": 5454708,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.352735218+00:00",
+              "End": "2026-01-22T01:59:12.358190009+00:00"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3137417,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.402087218+00:00",
+                "End": "2026-01-22T01:59:12.405224676+00:00"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2335792,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.405226384+00:00",
+                "End": "2026-01-22T01:59:12.407562218+00:00"
+              }
+            },
+            "Duration": 5566666,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.401996676+00:00",
+              "End": "2026-01-22T01:59:12.407563426+00:00"
+            }
+          },
+          {
+            "Part1": {
+              "Result": 576,
+              "ExecutionTime": 3408750,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.452215843+00:00",
+                "End": "2026-01-22T01:59:12.455624634+00:00"
+              }
+            },
+            "Part2": {
+              "Result": 207,
+              "ExecutionTime": 2406709,
+              "Timestamp": {
+                "Start": "2026-01-22T01:59:12.455627468+00:00",
+                "End": "2026-01-22T01:59:12.458034259+00:00"
+              }
+            },
+            "Duration": 5915083,
+            "Timestamp": {
+              "Start": "2026-01-22T01:59:12.452120301+00:00",
+              "End": "2026-01-22T01:59:12.458035426+00:00"
+            }
+          }
+        ]
+      }
+    },
     "01": {
       "Timestamp": {
         "Start": "2026-01-03T02:53:23.862Z",
