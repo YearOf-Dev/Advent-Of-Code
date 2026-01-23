@@ -83,7 +83,6 @@ function part1(input: string[]): number | undefined {
 function part2(input: string[]): number | undefined {
   let replacements: [string, string][] = []
   let medicine: string = ""
-  const startingMolecule = "e"
 
   // Parse the input
   for (var i = 0; i < input.length; i++) {
