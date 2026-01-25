@@ -2,6 +2,7 @@
 input.txt
 input_*.txt
 aoc.config.json
+log.txt
 
 ### macOS ###
 # General
