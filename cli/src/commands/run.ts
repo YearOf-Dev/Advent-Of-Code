@@ -78,7 +78,9 @@ export function addCommand_runAll(program: Command) {
     .option('-n, --no-auto-prepend-input', 'Disable Auto prepending the input file to the solution', false)
     .option('-r, --results <results>', 'The results file to use', 'results.json')
     .option('-d, --dry-run', 'Dry run the solution', false)
-    .action((year: string, day: string, options: { location: string, input: string, multiple: string, noAutoPrependInput: boolean, results: string, dryRun: boolean }) => {
+    .option('-s, --solutions <solutions>', 'The solutions to run', 'ts,go,py,rs')
+    .option('-a, --append', 'Append the results to the existing results for this challenge', true)
+    .action((year: string, day: string, options: { location: string, input: string, multiple: string, noAutoPrependInput: boolean, results: string, dryRun: boolean, solutions: string, append: boolean }) => {
       console.log('✨ Running all solutions for a given day...');
       console.log(`    [Results]: ${options.dryRun ? chalk.yellow('Ignored') : chalk.green('Saved to')} ${options.results}...`);
 
@@ -96,6 +98,12 @@ export function addCommand_runAll(program: Command) {
       let inputFile = path.join(options.location, year, day, options.input);
       if (options.noAutoPrependInput) {
         inputFile = options.input;
+      }
+
+      // Read the existing results
+      let existingResults: ResultsFile | undefined = undefined;
+      if (fs.existsSync(options.results)) {
+        existingResults = JSON.parse(fs.readFileSync(options.results, 'utf8'));
       }
 
       // Overview of all solution results
@@ -120,7 +128,16 @@ export function addCommand_runAll(program: Command) {
         Rust: undefined,
       };
 
-      let solutions = ['ts', 'go', 'py', 'rs'];
+      // If we are appending, use the existing results
+      if (options.append) {
+        if (existingResults !== undefined && existingResults[year] !== undefined && existingResults[year][day] !== undefined) {
+          challengeResults = existingResults[year][day];
+        }
+        // Update the start timestamp
+        challengeResults.Timestamp.Start = new Date().toISOString();
+      }
+
+      let solutions = options.solutions.split(',');
 
       for (let solution of solutions) {
         // Check the solution exists
@@ -166,23 +183,13 @@ export function addCommand_runAll(program: Command) {
       // Perform the final calculations
       challengeResults.Timestamp.End = new Date().toISOString();
 
-      challengeResults.Winners.Overall = pickWinner(challengeResults.Typescript?.TimeStats.Run.Average ?? 0, challengeResults.Go?.TimeStats.Run.Average ?? 0, challengeResults.Python?.TimeStats.Run.Average ?? 0, challengeResults.Rust?.TimeStats.Run.Average ?? 0);
-      challengeResults.Losers.Overall = pickLoser(challengeResults.Typescript?.TimeStats.Run.Average ?? 0, challengeResults.Go?.TimeStats.Run.Average ?? 0, challengeResults.Python?.TimeStats.Run.Average ?? 0, challengeResults.Rust?.TimeStats.Run.Average ?? 0);
-      challengeResults.Winners.Part1 = pickWinner(challengeResults.Typescript?.TimeStats.Part1.Average ?? 0, challengeResults.Go?.TimeStats.Part1.Average ?? 0, challengeResults.Python?.TimeStats.Part1.Average ?? 0, challengeResults.Rust?.TimeStats.Part1.Average ?? 0);
-      challengeResults.Losers.Part1 = pickLoser(challengeResults.Typescript?.TimeStats.Part1.Average ?? 0, challengeResults.Go?.TimeStats.Part1.Average ?? 0, challengeResults.Python?.TimeStats.Part1.Average ?? 0, challengeResults.Rust?.TimeStats.Part1.Average ?? 0);
-      challengeResults.Winners.Part2 = pickWinner(challengeResults.Typescript?.TimeStats.Part2.Average ?? 0, challengeResults.Go?.TimeStats.Part2.Average ?? 0, challengeResults.Python?.TimeStats.Part2.Average ?? 0, challengeResults.Rust?.TimeStats.Part2.Average ?? 0);
-      challengeResults.Losers.Part2 = pickLoser(challengeResults.Typescript?.TimeStats.Part2.Average ?? 0, challengeResults.Go?.TimeStats.Part2.Average ?? 0, challengeResults.Python?.TimeStats.Part2.Average ?? 0, challengeResults.Rust?.TimeStats.Part2.Average ?? 0);
+      challengeResults = calculateWinners(challengeResults);
+      challengeResults = calculateLosers(challengeResults);
 
       // Is it a dry run?
       if (options.dryRun) {
         console.log(JSON.stringify(challengeResults, null, 2));
         return;
-      }
-      
-      // Read the existing results
-      let existingResults: ResultsFile | undefined = undefined;
-      if (fs.existsSync(options.results)) {
-        existingResults = JSON.parse(fs.readFileSync(options.results, 'utf8'));
       }
 
       // Merge or add our new results to the existing results
@@ -207,45 +214,89 @@ export function addCommand_runAll(program: Command) {
     });
 }
 
-function pickWinner(ts: number, go: number, py: number, rs: number) {
-  let Winner: string = 'Typescript';
-  let WinningTime: number = ts;
+function calculateWinners(results: ChallengeResults) {
+  let overallWinner = pickWinner(results.Typescript?.TimeStats.Run.Average, results.Go?.TimeStats.Run.Average, results.Python?.TimeStats.Run.Average, results.Rust?.TimeStats.Run.Average);
+  let part1Winner = pickWinner(results.Typescript?.TimeStats.Part1.Average, results.Go?.TimeStats.Part1.Average, results.Python?.TimeStats.Part1.Average, results.Rust?.TimeStats.Part1.Average);
+  let part2Winner = pickWinner(results.Typescript?.TimeStats.Part2.Average, results.Go?.TimeStats.Part2.Average, results.Python?.TimeStats.Part2.Average, results.Rust?.TimeStats.Part2.Average);
 
-  if (go < WinningTime) {
+  results.Winners.Overall = overallWinner;
+  results.Winners.Part1 = part1Winner;
+  results.Winners.Part2 = part2Winner;
+
+  return results;
+}
+
+function pickWinner(ts?: number, go?: number, py?: number, rs?: number) {
+  let Winner: string = '';
+  let WinningTime: number = 0;
+  let WinnerPicked = false
+
+  if (ts !== undefined && (WinnerPicked === false || ts < WinningTime)) {
+    Winner = 'Typescript';
+    WinningTime = ts;
+    WinnerPicked = true;
+  }
+
+  if (go !== undefined && (WinnerPicked === false || go < WinningTime)) {
     Winner = 'Go';
     WinningTime = go;
+    WinnerPicked = true;
   }
 
-  if (py < WinningTime) {
+  if (py !== undefined && (WinnerPicked === false || py < WinningTime)) {
     Winner = 'Python';
     WinningTime = py;
+    WinnerPicked = true;
   }
 
-  if (rs < WinningTime) {
+  if (rs !== undefined && (WinnerPicked === false || rs < WinningTime)) {
     Winner = 'Rust';
     WinningTime = rs;
+    WinnerPicked = true;
   }
 
   return Winner;
 }
 
-function pickLoser(ts: number, go: number, py: number, rs: number) {
-  let Loser: string = 'Typescript';
-  let LosingTime: number = ts;
+function calculateLosers(results: ChallengeResults) {
+  let overallLoser = pickLoser(results.Typescript?.TimeStats.Run.Average, results.Go?.TimeStats.Run.Average, results.Python?.TimeStats.Run.Average, results.Rust?.TimeStats.Run.Average);
+  let part1Loser = pickLoser(results.Typescript?.TimeStats.Part1.Average, results.Go?.TimeStats.Part1.Average, results.Python?.TimeStats.Part1.Average, results.Rust?.TimeStats.Part1.Average);
+  let part2Loser = pickLoser(results.Typescript?.TimeStats.Part2.Average, results.Go?.TimeStats.Part2.Average, results.Python?.TimeStats.Part2.Average, results.Rust?.TimeStats.Part2.Average);
 
-  if (go > LosingTime) {
+  results.Losers.Overall = overallLoser;
+  results.Losers.Part1 = part1Loser;
+  results.Losers.Part2 = part2Loser;
+
+  return results;
+}
+
+function pickLoser(ts?: number, go?: number, py?: number, rs?: number) {
+  let Loser: string = '';
+  let LosingTime: number = 0;
+  let LoserPicked = false;
+
+  if (ts !== undefined && (LoserPicked === false || ts > LosingTime)) {
+    Loser = 'Typescript';
+    LosingTime = ts;
+    LoserPicked = true;
+  }
+
+  if (go !== undefined && (LoserPicked === false || go > LosingTime)) {
     Loser = 'Go';
     LosingTime = go;
+    LoserPicked = true;
   }
 
-  if (py > LosingTime) {
+  if (py !== undefined && (LoserPicked === false || py > LosingTime)) {
     Loser = 'Python';
     LosingTime = py;
+    LoserPicked = true;
   }
 
-  if (rs > LosingTime) {
+  if (rs !== undefined && (LoserPicked === false || rs > LosingTime)) {
     Loser = 'Rust';
     LosingTime = rs;
+    LoserPicked = true;
   }
 
   return Loser;
