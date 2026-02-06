@@ -13249,6 +13249,168 @@
           }
         ]
       }
+    },
+    "05": {
+      "Timestamp": {
+        "Start": "2026-02-06T02:01:07.639Z",
+        "End": "2026-02-06T02:09:40.683Z"
+      },
+      "Winners": {
+        "Overall": "Typescript",
+        "Part1": "Typescript",
+        "Part2": "Typescript"
+      },
+      "Losers": {
+        "Overall": "Typescript",
+        "Part1": "Typescript",
+        "Part2": "Typescript"
+      },
+      "Typescript": {
+        "Language": "TypeScript",
+        "TotalRuns": 5,
+        "TimeStats": {
+          "Run": {
+            "Fastest": 101559513213,
+            "Slowest": 103993954588,
+            "Average": 102463990021.6
+          },
+          "Part1": {
+            "Fastest": 38952576393,
+            "Slowest": 40206794019,
+            "Average": 39673934768.2
+          },
+          "Part2": {
+            "Fastest": 62057991861,
+            "Slowest": 63844484112,
+            "Average": 62789839053.4
+          }
+        },
+        "Results": {
+          "Part1": "1a3099aa",
+          "Part2": "694190cd"
+        },
+        "Timestamp": {
+          "Start": "2026-02-06T02:01:07.639Z",
+          "End": "2026-02-06T02:09:40.683Z"
+        },
+        "Runs": [
+          {
+            "Part1": {
+              "Result": "1a3099aa",
+              "ExecutionTime": 38952576393,
+              "Timestamp": {
+                "Start": "2026-02-06T02:01:07.777Z",
+                "End": "2026-02-06T02:01:46.731Z"
+              }
+            },
+            "Part2": {
+              "Result": "694190cd",
+              "ExecutionTime": 62649104654,
+              "Timestamp": {
+                "Start": "2026-02-06T02:01:46.731Z",
+                "End": "2026-02-06T02:02:49.381Z"
+              }
+            },
+            "Duration": 101601861005,
+            "Timestamp": {
+              "Start": "2026-02-06T02:01:07.777Z",
+              "End": "2026-02-06T02:02:49.381Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": "1a3099aa",
+              "ExecutionTime": 39559760227,
+              "Timestamp": {
+                "Start": "2026-02-06T02:02:49.526Z",
+                "End": "2026-02-06T02:03:29.086Z"
+              }
+            },
+            "Part2": {
+              "Result": "694190cd",
+              "ExecutionTime": 63041655403,
+              "Timestamp": {
+                "Start": "2026-02-06T02:03:29.086Z",
+                "End": "2026-02-06T02:04:32.128Z"
+              }
+            },
+            "Duration": 102601625130,
+            "Timestamp": {
+              "Start": "2026-02-06T02:02:49.526Z",
+              "End": "2026-02-06T02:04:32.128Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": "1a3099aa",
+              "ExecutionTime": 40149237768,
+              "Timestamp": {
+                "Start": "2026-02-06T02:04:32.267Z",
+                "End": "2026-02-06T02:05:12.416Z"
+              }
+            },
+            "Part2": {
+              "Result": "694190cd",
+              "ExecutionTime": 63844484112,
+              "Timestamp": {
+                "Start": "2026-02-06T02:05:12.416Z",
+                "End": "2026-02-06T02:06:16.261Z"
+              }
+            },
+            "Duration": 103993954588,
+            "Timestamp": {
+              "Start": "2026-02-06T02:04:32.266Z",
+              "End": "2026-02-06T02:06:16.261Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": "1a3099aa",
+              "ExecutionTime": 40206794019,
+              "Timestamp": {
+                "Start": "2026-02-06T02:06:16.407Z",
+                "End": "2026-02-06T02:06:56.614Z"
+              }
+            },
+            "Part2": {
+              "Result": "694190cd",
+              "ExecutionTime": 62355959237,
+              "Timestamp": {
+                "Start": "2026-02-06T02:06:56.614Z",
+                "End": "2026-02-06T02:07:58.969Z"
+              }
+            },
+            "Duration": 102562996172,
+            "Timestamp": {
+              "Start": "2026-02-06T02:06:16.406Z",
+              "End": "2026-02-06T02:07:58.969Z"
+            }
+          },
+          {
+            "Part1": {
+              "Result": "1a3099aa",
+              "ExecutionTime": 39501305434,
+              "Timestamp": {
+                "Start": "2026-02-06T02:07:59.112Z",
+                "End": "2026-02-06T02:08:38.614Z"
+              }
+            },
+            "Part2": {
+              "Result": "694190cd",
+              "ExecutionTime": 62057991861,
+              "Timestamp": {
+                "Start": "2026-02-06T02:08:38.614Z",
+                "End": "2026-02-06T02:09:40.673Z"
+              }
+            },
+            "Duration": 101559513213,
+            "Timestamp": {
+              "Start": "2026-02-06T02:07:59.111Z",
+              "End": "2026-02-06T02:09:40.673Z"
+            }
+          }
+        ]
+      }
     }
   }
 }

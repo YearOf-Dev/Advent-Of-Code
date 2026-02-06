@@ -95,7 +95,7 @@ function generateChecksum(roomEntry: string): string {
   return checksum
 }
 
-function validEntry(roomEntry): boolean {
+function isValidEntry(roomEntry): boolean {
   let givenChecksum =  getChecksum(roomEntry);
   let generatedChecksum = generateChecksum(roomEntry);
 
@@ -147,7 +147,7 @@ function part1(input: string[]): number | undefined {
   for (var i = 0; i < input.length; i++) {
     if (input[i].length == 0) { continue }
     
-    if (validEntry(input[i])) {
+    if (isValidEntry(input[i])) {
       let sectorID = getSectorID(input[i])
       if (sectorID != undefined) {
         sumOfSectorID += sectorID
@@ -164,7 +164,7 @@ function part2(input: string[]): number | undefined {
   for (var i = 0; i < input.length; i++) {
     if (input[i].length == 0) { continue }
     
-    if (validEntry(input[i])) {
+    if (isValidEntry(input[i])) {
       let name = decodeName(input[i])
       if (name == undefined) {
         continue
